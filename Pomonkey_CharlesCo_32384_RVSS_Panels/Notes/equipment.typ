@@ -70,12 +70,13 @@
 
 - Outdoor panels - NEMA 4X
   - Hoffman or approved equal #sym.arrow let's do Saginaw 
+  - Min 24" H x 20" W x 10" D
+  - Rubber Gasketed Continuous Hinge Door?
 - Heater for condensation control
   - 40-80#sym.degree fahrenheit
   - N.C. thermostat control
   - dedicated circuit breaker protection
   - 120VAC operating voltage
-
 - Lighting
   - 1 door controlled if enclosure >$12"ft"^3$
 - *Motor protection relay by others*
