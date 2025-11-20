@@ -1,3 +1,11 @@
+#set document(
+  title: [ 32384 RVSS Panel Notes ],
+)
+
+#set page(
+  paper: "us-letter"
+)
+
 #align( center, [
   = Equipment Information
 ])
