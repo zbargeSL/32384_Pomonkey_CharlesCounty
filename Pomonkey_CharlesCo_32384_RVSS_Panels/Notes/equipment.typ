@@ -53,8 +53,10 @@
 == RVSS
 === Spec Section 16421
  - Square D (Equivalent to Cutler-Hammer Type S801)
-  - Something like #link("https://www.se.com/us/en/product/ATS480D22Y/soft-starter-altistart-480-22a-208-to-690v-ac-control-supply-110-to-230v-ac/")[ATS480D22Y] (used in combo with 8536 starter?)
+  - Something like #link("https://www.se.com/us/en/product/ATS480D17Y/soft-starter-altistart-480-22a-208-to-690v-ac-control-supply-110-to-230v-ac/")[ATS480D17Y]
+    - Ended up going with this same part number, no regular starter
   - Keypad: #link("https://www.se.com/us/en/product/VW3A1113/plain-text-display-terminal-altivar-128-x-64pixels-ip21/")[VW3A1113]
+    - *This is included in the RVSS part number*
   - Keypad Mounting Kit: #link("https://www.se.com/us/en/product/VW3A1114/basic-keypad-door-mounting-kit-altivar-ip20/")[VW3A1114]
   - Keypad Cable: #link("https://www.se.com/us/en/product/VW3A1104R30/remote-cable-altivar-for-graphic-display-terminal-3-meters/")[VW3A1104R30]
  - Soft start-stop
@@ -69,10 +71,18 @@
 == Power Meter (Motor Management Relay)
 === Spec Section 16421-2.01W
 
-- For now, go with spec suggestion:  #link("https://apac.socomec.com/en/p/diris-a-40")[
-  Socomec 48250501
-]
 
+- Spec shows:  #link("https://apac.socomec.com/en/p/diris-a-40")[
+  Socomec 48250501
+] but spec also calls for DIN rail mounting.
+- Takeoff shows #link("https://www.socomec.us/en-us/reference/48290000")[Socomec 48290000]
+  - Looks like this is the meter which can connect to the device in spec. *But we don't need the digital display. Not show on contact I-4.*
+  - Required Accessories:
+    - Diris 0-ioa module: #link("https://www.socomec.us/en-us/reference/48290031")[48290031]
+    - TR Split-Core Sensors: #link("https://www.socomec.us/en-us/reference/48290556")[48290556]
+    - Sensor cables: (estimate that we'll use the 6.5 ft cable: #link("https://www.socomec.us/en-us/reference/48290584")[48290584]
+    - 3-phase fuse holder: #link("https://us.mersen.com/en/products/303-series-class-cc-open-style-fuse-blocks-midget/30323r")[Mersen 3023R]
+      - Should accomodate typical CC fuses used by transformer, for example
 == Control Systems Hardware
 == Spec Section 17441
 
@@ -87,6 +97,9 @@
   - 120VAC operating voltage
 - Lighting
   - 1 door controlled if enclosure >$12"ft"^3$
+- Surge Suppressor
+  - Think I'm only going to need it for 480V
+    - #link("https://citel.us/en/ac-power/din-rail-ac/ds43s-480")[Citel DS43S-480]
 - *Motor protection relay by others*
 - Circuit Breakers
   - Typical Weidmuller circuit breakers should be fine
