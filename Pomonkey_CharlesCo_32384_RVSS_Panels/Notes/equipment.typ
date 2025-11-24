@@ -57,7 +57,7 @@
     - Ended up going with this same part number, no regular starter
   - Keypad: #link("https://www.se.com/us/en/product/VW3A1113/plain-text-display-terminal-altivar-128-x-64pixels-ip21/")[VW3A1113]
     - *This is included in the RVSS part number*
-  - Keypad Mounting Kit: #link("https://www.se.com/us/en/product/VW3A1114/basic-keypad-door-mounting-kit-altivar-ip20/")[VW3A1114]
+  - Keypad Mounting Kit: #link("https://www.se.com/us/en/product/VW3A1112/door-mounting-kit-altivar-for-remote-graphic-terminal-ip65/?range=63441-altivar-340-machine-variable-frequency-drive-vfd&node=12052134541-configuration-and-runtime-tools&selectedNodeId=12052134580")[VW3A1112]
   - Keypad Cable: #link("https://www.se.com/us/en/product/VW3A1104R30/remote-cable-altivar-for-graphic-display-terminal-3-meters/")[VW3A1104R30]
  - Soft start-stop
  - SCR based power section
@@ -91,6 +91,7 @@
   - Min 24" H x 20" W x 10" D
   - Rubber Gasketed Continuous Hinge Door?
 - Heater for condensation control
+  - Chose #link("https://www.saginawcontrol.com/partnumber_info/?n=SCE-TSH50")[Saginaw SCE-TSH50] with #link("https://www.findernet.com/en/worldwide/series/7t-series-panel-thermo-hygrostat-and-thermostats/type/type-7t81-panel-thermostat/")[Finder 7T.81.0.000.2403]
   - 40-80#sym.degree fahrenheit
   - N.C. thermostat control
   - dedicated circuit breaker protection
