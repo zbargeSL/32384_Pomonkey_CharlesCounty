@@ -76,12 +76,12 @@
   Socomec 48250501
 ] but spec also calls for DIN rail mounting.
 - Takeoff shows #link("https://www.socomec.us/en-us/reference/48290000")[Socomec 48290000]
-  - Looks like this is the meter which can connect to the device in spec. *But we don't need the digital display. Not show on contact I-4.*
+  - Looks like this is the meter which can connect to the device in spec. *But we don't need the digital display. Not shown on contract I-4.*
   - Required Accessories:
-    - Diris 0-ioa module: #link("https://www.socomec.us/en-us/reference/48290031")[48290031]
+    - Diris 0-iod module (for pulsed output power consumption): #link("https://www.socomec.us/en-us/reference/48290030")[48290030]
     - TR Split-Core Sensors: #link("https://www.socomec.us/en-us/reference/48290556")[48290556]
-    - Sensor cables: (estimate that we'll use the 6.5 ft cable: #link("https://www.socomec.us/en-us/reference/48290584")[48290584]
-    - 3-phase fuse holder: #link("https://us.mersen.com/en/products/303-series-class-cc-open-style-fuse-blocks-midget/30323r")[Mersen 3023R]
+    - Sensor cables: (estimate that we'll use the 6.5 ft cable): #link("https://www.socomec.us/en-us/reference/48290584")[48290584]
+    - 4-phase fuse holder: #link("https://us.mersen.com/en/products/303-series-class-cc-open-style-fuse-blocks-midget/30324r")[Mersen 3024R]
       - Should accomodate typical CC fuses used by transformer, for example
 == Control Systems Hardware
 == Spec Section 17441
