@@ -92,6 +92,7 @@
   - Rubber Gasketed Continuous Hinge Door?
 - Heater for condensation control
   - Chose #link("https://www.saginawcontrol.com/partnumber_info/?n=SCE-TSH50")[Saginaw SCE-TSH50] with #link("https://www.findernet.com/en/worldwide/series/7t-series-panel-thermo-hygrostat-and-thermostats/type/type-7t81-panel-thermostat/")[Finder 7T.81.0.000.2403]
+    - Minimum 2.36" thermal safety gap on all sides
   - 40-80#sym.degree fahrenheit
   - N.C. thermostat control
   - dedicated circuit breaker protection
