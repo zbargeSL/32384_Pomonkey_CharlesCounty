@@ -105,7 +105,7 @@
 
 - 24V Power Supplies and Redundancy Module
   - Redundancy Module #link("https://www.phoenixcontact.com/en-us/products/redundancy-module-quint-diode12-24dc2x201x40-2320157")[2320157]
-  - Power Supply #link("https://www.phoenixcontact.com/en-us/products/redundancy-module-quint-diode12-24dc2x201x40-2320157")[2320157]
+  - Power Supply #link("https://www.phoenixcontact.com/en-us/products/power-supply-quint-ps1ac24dc20-2866776")[2866776]
 
 - Cellular Modem
   - Actual modem provided by others?
