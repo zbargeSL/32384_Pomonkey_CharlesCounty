@@ -119,7 +119,7 @@
     - Ventenv #link("https://ventevinfra.com/product/5-ft-195-series-cable-assembly-with-n-male-tnc-male-connectors/")[LMR195]
 
 - Network Switch
-  - Moxa #link("Ehttps://www.moxa.com/en/products/industrial-network-infrastructure/ethernet-switches/layer-2-managed-switches/eds-408a-series#specifications")[DS-408A Series]
+  - Moxa #link("https://www.moxa.com/en/products/industrial-network-infrastructure/ethernet-switches/layer-2-managed-switches/eds-408a-series")[DS-408A Series]
     - Not sure of exact configuration yet
 
 - OIT
