@@ -116,11 +116,20 @@
   - Cable
     - CommScope #link("https://www.andrew.com/products/fiber-power-rf-connectivity-accessories/rf-connectivity/coaxial-cables/itemldf4-50a/")[LDF4-50A]
   - SMA Jumper Cable
-    - Ventenv #link("https://ventevinfra.com/product/5-ft-195-series-cable-assembly-with-n-male-tnc-male-connectors/")[LMR195]
+    - Ventenv #link("https://ventevinfra.com/product/6-ft-lmr-195-series-cable-assembly-with-n-male-sma-male-connectors/")[LMR195NMSM-6]
 
 - Network Switch
-  - Moxa #link("https://www.moxa.com/en/products/industrial-network-infrastructure/ethernet-switches/layer-2-managed-switches/eds-408a-series")[DS-408A Series]
-    - Not sure of exact configuration yet
+    - #strike[Moxa #link("https://www.moxa.com/en/products/industrial network infrastructure/ethernet switches/layer 2 managed switches/eds 408a series")[EDS 408A Series]]
+      - Not sure where I saw this, because I can't find it in spec, but takeoff shows a Moxa EDS series switch
+    - Moxa EDS series switch or approved equal requirement shown on Contract Drawing I-6
+      - Going with Moxa #link("https://www.moxa.com/en/products/industrial-network-infrastructure/ethernet-switches/unmanaged-switches/eds-205-series#specifications")[EDS-205]
+    - Switch should be unmanaged
+    - Should have enough ports for all required connections, +20% spare
+      - Cellular modem (x1)
+      - OIT (x1)
+      - PLC (x1)
+      - Heat Trace Controller (x1)
+      - $4 "required connections" + (4*20% "spare")=ceil.l 4.8 ceil.r arrow.r "at least" 5 "ports on switch"$
 
 - OIT
   - #link("https://www.se.com/us/en/product/HMIDT752/flat-screen-harmony-gtu-15inch-wide-display-1366-x-768pixels-fwxga/")[HMIDT752] display 
@@ -129,6 +138,13 @@
 
 - Digital Recorder
   - E+H RSG35-1C84/0
+     - Part No. #link("https://www.endress.com/en/field-instruments-overview/system-components-recorder-data-manager/Ecograph-T-RSG35-Universal-Graphic-Data-Manager")[RSG35-B2A+C1]
+        - Includes #link("https://www.automation24.com/memory-card-sd-1-gb-endress-hauser-71187780")[71187780] memory card. Might not need to get this from E+H, but I'll include it for now
 
 - Level Display
   - RIA452-C211A11A
+
+- ISB/ISR
+  - Phoenix Contact MACX series
+
+
