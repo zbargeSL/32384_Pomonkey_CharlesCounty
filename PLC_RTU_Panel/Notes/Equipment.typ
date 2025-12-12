@@ -84,6 +84,11 @@
     - With #link("https://www.se.com/us/en/product/BMXFTB2800/terminal-block-modicon-x80-28pin-removable-caged-1-x-0-34-1mm2/")[BMXFTB2800] terminal block
   - Analog Output Module - #link("https://www.se.com/us/en/product/BMXAMO0410H/analog-isolated-high-level-output-module-modicon-x80-4-o-0-to-20ma-4-to-20ma-10v-positive-or-negative-severe-environment/?range=61938-modicon-x80-modules&node=56125782970-i-o-modules&selectedNodeId=56125812602")[BMXAMO0410H]
     - With #link("https://www.se.com/us/en/product/BMXFTB2000/terminal-block-modicon-x80-20pin-removable-caged-1-x-0-34-1mm2/")[BMXFTB2000] terminal block
+  - Should be enough modules to support all necessary IO and 20% spare for each IO type
+    - DI - $30 "digital inputs" * 20% "spare" = 36 "digital inputs" arrow.r ceil.l 36/16 ceil.r = 3 "digital input cards"$
+    - DO - $ceil.l 4 "digital outputs" * 20% "spare" ceil.r = 5 "digital outputs" arrow.r ceil.l 5/8 ceil.r = 1 "digital output cards"$
+    - AI - $ceil.l 4 "analog inputs" * 20% "spare" ceil.r = 5 "analog inputs" arrow.r ceil.l 5/8 ceil.r = 1 "analog input cards"$
+    - AO - No analog outputs but need to include at least one type of that module
   - Spart Parts:
     - 1 of each module
 
