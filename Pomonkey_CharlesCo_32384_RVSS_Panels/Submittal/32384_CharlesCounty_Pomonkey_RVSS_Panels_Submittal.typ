@@ -58,6 +58,8 @@
 \
 #link(<DataSheets>)[*Data Sheets*] \
 \
+#link(<HeatingAndCoolingSizes>)[*Heating and Cooling Sizes*] \
+\
 #link(<DrawingIndex>)[*Drawing Index*] \
 \
 #link(<Drawings>)[*Drawings*] \
@@ -168,6 +170,37 @@ General Comments: <Comments>
      [DIN rail mount],
    ) \
   ], 
+)
+
+#pagebreak()
+ 
+#align(center)[
+  #upper[*#project*]
+]
+
+*Heating and Cooling Sizes:*<HeatingAndCoolingSizes>
+
+#let rvss_btu = 65
+#let transformer_btu = 73
+#let btu_total = rvss_btu + transformer_btu
+
+#align(center, [
+  #table(
+  columns: (35%, 30%),
+  align: (x, y) => 
+    if y < 3 and x == 0 { left } 
+    else if x > 0 { center } else { right }, 
+  stroke: (x, y) => (
+    top: if y == 0 or (y == 3 and x == 1) { 1pt },
+    right: if x == 1 { 1pt },
+    left: if x == 0 { 1pt },
+    bottom: if y == 0 or y == 3 { 1pt }
+  ),
+  [Device \ ], [HEAT DISSIPATED \ (BTU/hr) ],
+  [RVSS], [65],
+  [Transformer], [73],
+  [Total], [#btu_total]
+)]
 )
 
 #pagebreak()

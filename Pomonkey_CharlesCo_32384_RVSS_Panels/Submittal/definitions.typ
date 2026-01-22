@@ -20,6 +20,11 @@
 #let comments = (
 )
 
+#let heat_dissapated = (
+  "RVSS": "65",
+  "Transformer": "73",
+)
+
 #let component = e.types.declare(
   "component",
   doc: "data for component used in instrument/panel",
