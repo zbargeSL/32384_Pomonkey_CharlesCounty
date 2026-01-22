@@ -9,7 +9,7 @@
 #let reference = "Charles County Pomonkey Pump Station Improvements"
 
 #let is_instrument_submittal = false
-#let has_spare_parts = true
+#let has_spare_parts = false
 #let has_heating_calc = false
 
 #let term_blocks = [TB-AC, TB-ISB]
