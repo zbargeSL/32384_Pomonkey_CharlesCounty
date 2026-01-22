@@ -20,10 +20,6 @@
   paper: "us-letter",
 )
 
-#set par(
-  justify: true
-)
-
 #{
   set page(
     margin: (top: 2in, bottom: 2in)
@@ -60,11 +56,21 @@
 \
 #link(<PartsIndex>)[*Parts Index*] \ 
 \
+#if has_spare_parts [
+  #link(<SparePartsIndex>)[*Spare Parts Index*] \
+  \
+]
 #link(<DataSheets>)[*Data Sheets*] \
 \
-#link(<DrawingIndex>)[*Drawing Index*] \
-\
-#link(<Drawings>)[*Drawings*] \
+#if has_heating_calc [
+  #link(<HeatingAndCoolingSizes>)[*Heating and Cooling Sizes*] \
+  \ 
+]
+#if not is_instrument_submittal [
+  #link(<DrawingIndex>)[*Drawing Index*] \
+  \
+  #link(<Drawings>)[*Drawings*] \
+]
 
 #pagebreak()
 
@@ -113,6 +119,36 @@ General Comments: <Comments>
 }
 
 #pagebreak()
+
+#if has_spare_parts [
+  #let spare_parts_rows = ()
+
+  #for spare_component in spare_parts {
+    spare_parts_rows.push(parts_row.filter(comp => comp.contains(spare_component.catalog)))
+    spare_parts_rows.last().push(spare_parts_qty.at(spare_component.catalog))
+  }
+
+  #align(center)[*#upper(project)*]
+
+  #{
+    set text(size: 12pt)
+    [*Spare Parts Index:* <SparePartsIndex>]
+  }
+
+  #v(.3em, weak: true)
+  #{
+    set text(size: 10pt)
+
+    table(
+      columns: (auto, 1fr, 1fr, 1fr, 1fr),
+      align:(center + horizon), 
+      table.header([*SHT*], [*MANUFACTURER*], [*MODEL*], [*DESCRIPTION*], [*QTY*]),
+      ..spare_parts_rows.flatten(),
+    )
+  }
+
+  #pagebreak()
+]
 
 #align(center)[
   #upper[*#project*]
@@ -176,29 +212,64 @@ General Comments: <Comments>
 
 #pagebreak()
 
-#align(center)[
-  #upper[*#project*]
+#if has_heating_calc [
+  #align(center)[
+    #upper[*#project*]
+  ]
+
+  *Heating and Cooling Sizes:*<HeatingAndCoolingSizes>
+
+  #align(center,
+  [
+    #table(
+      columns: (auto, 40%),
+      inset: (x, y) =>
+        if x == 0 and y <= heat_dissapated.len() { (right: 2em, left: 0% + 5pt, top: 0% + 5pt, bottom: 0% + 5pt) } else { 0% + 5pt },  
+      align: (x, y) =>
+        if y < heat_dissapated.len() and x == 0 {left}
+        else if x > 0 { center } else { right }
+      ,
+      stroke: (x, y) => (
+        top: if y == 0 or (y == heat_dissapated.len() + 1 and x == 1) { 1pt },
+        right: if x == 1 { 1pt },
+        left: if x == 0 { 1pt },
+        bottom: if y == 0 or y == heat_dissapated.len() + 1 { 1pt }
+      ),
+      [ Device \ \ ], [ HEAT DISSIPATED \ \ ],
+      ..heat_dissapated.pairs().flatten(),
+      [Total], [#heat_dissapated.values().map(val => float(val)).sum()]
+    )
+  ])
+
+  #pagebreak()
+
 ]
-\
-*Drawings Index*:<DrawingIndex>
 
-#{
-  set text(size: 10pt)
+#if not is_instrument_submittal [
 
-  table(
-    columns: (1fr, 3fr),
-    align: (center, left),
-    table.header(align(left)[*Drawing Number*], [*Drawing Description*]),
-    ..drawings.pairs().flatten()
-  )
-}
+  #align(center)[
+    #upper[*#project*]
+  ]
+  \
+  *Drawings Index:*<DrawingIndex>
 
-#pagebreak()
+  #{
+    set text(size: 10pt)
 
-#align(center)[
-  #upper[*#project*]
+    table(
+      columns: (1fr, 3fr),
+      align: (center, left),
+      table.header(align(left)[*Drawing Number*], [*Drawing Description*]),
+      ..drawings.pairs().flatten()
+    )
+  }
+
+  #pagebreak()
+
+  #align(center)[
+    #upper[*#project*]
+  ]
+
+  \
+  Drawings:<Drawings>
 ]
-
-\
-Drawings:<Drawings>
-
