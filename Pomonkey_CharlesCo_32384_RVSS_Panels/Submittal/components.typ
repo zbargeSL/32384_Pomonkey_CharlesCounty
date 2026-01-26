@@ -150,7 +150,7 @@
     qty: 3,
     sheet: 4,
     description: "PTT Light, 120VAC LED, Amber",
-    tags: ("LT0402", "LT0408", "LT0409",),
+    tags: ("LT0402", "LT0410", "LT0411",),
     specs: (
       [Push-to-test pilot light],
       [Spring return operator type],
@@ -533,10 +533,25 @@
     ),
   ),
   component(
+    manufacturer: "Flygt",
+    catalog: "40-501098",
+    qty: 1,
+    sheet: 17,
+    description: "Pump Monitoring Relay",
+    tags: ("MPR0408",),
+    specs: (
+      [Current sensing operational principle],
+      [-25#sym.degree to +60#sym.degree;C operating temperature],
+      [120VAC, #sym.minus;15% - #sym.plus;15%, 50/60Hz supply voltage],
+      [250VAC / 5A contact rating],
+      [12VDC +/- 5% voltage to sensor],
+    ),
+  ),
+  component(
     manufacturer: "SCE",
     catalog: "SCE-TSH50",
     qty: 1,
-    sheet: 17,
+    sheet: 18,
     description: "Enclosure Heater",
     tags: ("HTR0319",),
     specs: (
@@ -551,7 +566,7 @@
     manufacturer: "Finder",
     catalog: "7T.81.0.000.2403",
     qty: 1,
-    sheet: 17,
+    sheet: 18,
     description: "Enclosure Heater Thermostat, NC",
     tags: ("Thermostat",),
     specs: (
