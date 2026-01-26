@@ -155,7 +155,7 @@
   ),
   component(
     manufacturer: "Weidmuller",
-    catalog: "9926251002",
+    catalog: "7940102572",
     qty: "1",
     sheet: 6,
     description: "Circuit Breaker, 120VAC, 2A",
@@ -174,7 +174,7 @@
     catalog: "8536-SAO11V02ES",
     qty: "1",
     sheet: 7,
-    description: "NEMA MOTOR STARTER / OVERLOAD",
+    description: "NEMA Motor Starter / Overload",
     tags: ("M5205",),
     specs: (
       [Non-reversing starter type],
@@ -188,42 +188,13 @@
   component(
     manufacturer: "Square D",
     catalog: "B9.10",
-    qty: "2",
+    qty: "1",
     sheet: 7,
     description: "Thermal Motor Overload",
     tags: ("OL5201",),
     specs: (
       [Class 20 motor tripping class],
       [Melting alloy thermal overload type],
-    ),
-  ),
-  component(
-    manufacturer: "Phoenix Contact",
-    catalog: "3046100",
-    qty: "1",
-    sheet: 8,
-    description: "Fuse Terminal Block, 120VAC",
-    tags: ("FU5204",),
-    specs: (
-      [4kV rated surge voltage],
-      [G / 5x20 fuse size],
-      [110VAC...250VAC LED voltage range],
-      [0.41mA...0.96mA LED current range],
-      [Category III overvoltage category],
-    ),
-  ),
-  component(
-    manufacturer: "Mersen",
-    catalog: "MI5HF25V2/100",
-    qty: "1",
-    sheet: 8,
-    description: "Miniature Fuse, Fast Acting, 2A",
-    tags: ("FU5204",),
-    specs: (
-      [Quick acting fuse, 1500A I.R. AC rating],
-      [Ceramic body material],
-      [Brass, nickel plated contact caps],
-      [2A current rating],
     ),
   ),
   component(
