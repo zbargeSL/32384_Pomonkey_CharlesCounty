@@ -99,7 +99,7 @@
   ),
   component(
     manufacturer: "Weidmuller",
-    catalog: "9926251005",
+    catalog: "7940102575",
     qty: "1",
     sheet: 4,
     description: "Circuit Breaker, 120VAC, 5A",
@@ -117,7 +117,7 @@
   ),
   component(
     manufacturer: "Weidmuller",
-    catalog: "9926251001",
+    catalog: "7940125379",
     qty: "1",
     sheet: 4,
     description: "Circuit Breaker, 120VAC, 1A",

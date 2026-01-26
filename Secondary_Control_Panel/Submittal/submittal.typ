@@ -111,10 +111,10 @@ General Comments: <Comments>
     align:(center + horizon), 
     table.header([*SHT*], [*MANUFACTURER*], [*MODEL*], [*DESCRIPTION*]),
     ..parts_row.flatten(),
-    [#link(label(str(last_sheet)))[#last_sheet]], [Phoenix Contact], [UT 2,5], [Terminal Block],
-    [#link(label(str(last_sheet)))[#last_sheet]], [Phoenix Contact], [UT 2,5-PE], [Grounding Terminal Block],
-    [#link(label(str(last_sheet)))[#last_sheet]], [Phoenix Contact], [D-UT 2,5-10], [Terminal End Barrier],
-    [#link(label(str(last_sheet)))[#last_sheet]], [Phoenix Contact], [E/NS 35 N], [Terminal Anchor],
+    [#link(label(str(last_sheet)))[#last_sheet]], [Phoenix Contact], [3044076], [Terminal Block],
+    [#link(label(str(last_sheet)))[#last_sheet]], [Phoenix Contact], [3044092], [Grounding Terminal Block],
+    [#link(label(str(last_sheet)))[#last_sheet]], [Phoenix Contact], [3047028], [Terminal End Barrier],
+    [#link(label(str(last_sheet)))[#last_sheet]], [Phoenix Contact], [0800886], [Terminal Anchor],
   )
 }
 
@@ -189,13 +189,13 @@ General Comments: <Comments>
   table.cell(stroke: (left: none, top: none, right: none))[], table.cell(stroke: (left: none, top: none, right: none))[#align(right)[*Data Sheet #last_sheet#label(str(last_sheet))*]],
   align(left)[Customer: \ Reference: \ Date: ], [#contractor \ #reference \ #datetime.today().display("[month]/[day]/[year]")],
   [#underline[Qty] \ \ ], [#underline[Description] \ \ ],
-  [A/R \ \ \ A/R \ \ \ A/R \ \ \ A/R], [Mfg: Phoenix Contact: Terminal Block \ Model Number: UT 2,5 \
+  [A/R \ \ \ A/R \ \ \ A/R \ \ \ A/R], [Mfg: Phoenix Contact: Terminal Block \ Model Number: 3044076 \
   \
-  Mfg: Phoenix Contact: Grounding Terminal Block \ Model Number: UT 2,5-PE \ 
+  Mfg: Phoenix Contact: Grounding Terminal Block \ Model Number: 3044092 \ 
   \
-  Mfg: Phoenix Contact: Terminal End Barrier \ Model Number: D-UT 2,5-10 \
+  Mfg: Phoenix Contact: Terminal End Barrier \ Model Number: 3047028 \
   \
-  Mfg: Phoenix Contact: Terminal Anchor \ Model Number: E/NS 35 N \
+  Mfg: Phoenix Contact: Terminal Anchor \ Model Number: 0800886 \
   \
   Tags / Service: \ #term_blocks / #service \
   \
