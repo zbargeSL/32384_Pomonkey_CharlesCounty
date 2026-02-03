@@ -201,7 +201,7 @@
     manufacturer: "Square D",
     catalog: "9050JCK70V20",
     qty: "1",
-    sheet: 9,
+    sheet: 8,
     description: "Repeat Cycle Timer, 0.5 Sec to 999 Hours",
     tags: ("RCT",),
     specs: (
@@ -217,7 +217,7 @@
     manufacturer: "Square D",
     catalog: "8501NR61",
     qty: "1",
-    sheet: 9,
+    sheet: 8,
     description: "RELAY SOCKET, 120VAC, 11 PIN, DIN",
     tags: ("RCT",),
     specs: (
