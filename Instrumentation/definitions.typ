@@ -1,10 +1,10 @@
 #import "@preview/elembic:1.1.1" as e: field, types
 
 #let project = "32384 Charles County Pomonkey Pump Station Improvements"
-#let purpose = [#underline[*purpose*]]
-#let spec_section = "spec section"
-#let engineer = "engineer"
-#let contractor = "contractor"
+#let purpose = [#underline[*Instrumentation Submittal*]]
+#let spec_section = "Section 17500 - Instrumentation"
+#let engineer = "WRA"
+#let contractor = "Johnston Construction"
 #let service = "Instruments"
 #let reference = "32384 Charles County Pomonkey Pump Station Improvements"
 
@@ -19,8 +19,7 @@
 )
 
 #let comments = (
-  "test comment 1",
-  "test comment 2"
+  "This submittal assumes cable lengths for the various instruments included. Contractor to confirm cable lengths for instruments.",
 )
 
 #let heat_dissapated = (
