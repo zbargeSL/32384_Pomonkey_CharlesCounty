@@ -82,17 +82,17 @@
   ),
   component(
     manufacturer: "Precision Digital",
-    catalog: "PD765-7X2-00",
+    catalog: "PD6000-7H2",
     qty: "1",
     sheet: 4,
     description: "Digital Process Meter Display",
     tags: ("LEVEL DISPLAY",),
     service: "PLC/RTU Panel Process Meter Display",
     specs: (
-      [1.2" red LED 4 digit display],
+      [0.6" dual line red LED 6 digit SunBright display],
       [NEMA 4X, IP65 rated with provided panel gasket],
       [24VDC supply voltage],
-      [-40 to 185#sym.degree;F operating temperature range],
+      [-40 to 149#sym.degree;F operating temperature range],
       [4-20mA input, 2 form C SPDT relays rated at 3A at 30VDC or 3A at 250VAC resistive load],
       [Programmable output relay operation and reset functionality],
       [Max/Min display stored until reset by user or meter is turned off],
@@ -101,13 +101,9 @@
   ),
 )
 
-#let spare_parts = components.filter(comp => comp.catalog == "71187780")
-    ),
-  ),
-)
-
-#let spare_parts = components.filter(comp => comp.catalog == "71187780")
+#let spare_parts = components.filter(comp => comp.catalog == "71187780" or comp.catalog == "FMR20-CBPBMVCEVEE3+Z1")
 
 #let spare_parts_qty = (
   "71187780": "1",
+  "FMR20-CBPBMVCEVEE3+Z1": "1",
 )
