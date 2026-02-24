@@ -71,10 +71,16 @@
 ]
 \
 \
-General Comments: <Comments>
+*General Comments: <Comments>*
 
 #for comment in comments{
   [+ #comment \ \ ]
+}
+
+*Resubmittal Comment Confirmations:*
+
+#for (resub_comment, response) in resub_comments{
+  [+ #resub_comment \ \ *Sherwood Logan Response:* \ \ #response \ \ ]
 }
 
 #pagebreak()
