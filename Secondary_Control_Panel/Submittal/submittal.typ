@@ -85,6 +85,12 @@ General Comments: <Comments>
   [+ #comment \ \ ]
 }
 
+Resubmittal Comment Confirmations:
+
+#for (resub_comment, resp) in resub_comments{
+  [+ #resub_comment #linebreak()#linebreak() Sherwood Logan Response: #linebreak()#linebreak() #resp #linebreak()#linebreak()]
+}
+
 #pagebreak()
 
 #align(center)[
