@@ -32,7 +32,7 @@
   - SFAN-01: 16.00 in.
 
 Based on Contract Drawings, UPS and PLC panels are estimated to be 20 and 30 inches wide, respectively. Total width of all panels currently comes to 149in. approximately, which will not suit the 11ft backplate. Contractor shall minimize panel widths (to match Contract Drawings) as necessary to meet backplate width requirements.": [The width of the RVSS panel enclosures have been modified so that all of the submitted panel dimensions should fit on the 11ft backplate.],
-"Charles County Comment - High Level Float: It appears the high-level float will activate the secondary control mode. We want to make sure the high-level alarm does not generate repeatedly when the station is in secondary mode.": [The high-level float does activate the secondary control mode. According to the PLC I/O List in Spec Section 17600 3.07 the Secondary Control Panel High Level Alarm displays, but is not a PCS alarm. Thus, the repetitive alarm concern should not present an issue.]
+"Charles County Comment - High Level Float: It appears the high-level float will activate the secondary control mode. We want to make sure the high-level alarm does not generate repeatedly when the station is in secondary mode.": [The high-level float does activate the secondary control mode. According to the PLC I/O List in Spec Section 17600 3.07 the Secondary Control Panel High Level Alarm is monitored by the PCS, but is not a PCS alarm. Thus, the repetitive alarm concern should not present an issue.]
 )
 
 #let heat_dissapated = (
