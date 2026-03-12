@@ -61,6 +61,19 @@
     ),
   ),
   component(
+    manufacturer: "SCE",
+    catalog: "SCE-BVKD",
+    qty: "1",
+    sheet: 1,
+    description: "NEMA 4X Vent/Drain",
+    tags: ("DRAIN",),
+    specs: (
+      [NEMA 4X rated],
+      [Installed on bottom of enclosure as dual drain and vent],
+      [10 inch#sym.dot;lb installation torque],
+    ),
+  ),
+  component(
     manufacturer: "Jasco",
     catalog: "26741",
     qty: "1",
@@ -155,6 +168,27 @@
       [8W maximum no-load power dissipation],
       [DIN rail mounting],
     ),
+    misc: [
+      #underline[Power supply load calculations]
+
+      PWS1220 and PWS1225 are redundant
+
+      #let total_current_draw = pws_components.values().reduce((acc, v) => float(v) + float(acc))
+      #let pws_current_cap = 20
+
+      #table(
+        columns: (75%, 25%),
+        align: (left, center),
+        stroke: (x,y) => if y == 0 or (x == 1 and y == pws_components.len()) {(bottom: 1pt)} else {none},
+        table.header([Description], [Current Draw #linebreak() (Amps)]),
+        ..pws_components.pairs().flatten(),
+        table.cell(align: right, [Total Current Draw]), [#total_current_draw]
+      )
+
+      #let perc_use = total_current_draw/pws_current_cap * 100
+
+      #list(indent: 1em)[$"Total current capacity" = #total_current_draw/#pws_current_cap", "#perc_use% "used"$] 
+    ]
   ),
   component(
     manufacturer: "Phoenix Contact",
@@ -173,7 +207,7 @@
   ),
   component(
     manufacturer: "Weidmuller",
-    catalog: "2940102584",
+    catalog: "7940102584",
     qty: "1",
     sheet: 8,
     description: "Circuit Breaker, 120VAC, 20A",
@@ -188,37 +222,7 @@
   ),
   component(
     manufacturer: "Weidmuller",
-    catalog: "2940102582",
-    qty: "4",
-    sheet: 8,
-    description: "Circuit Breaker, 120VAC, 15A",
-    tags: ("CB1205", "CB1207", "CB1220", "CB1225",),
-    specs: (
-      [240VAC operating voltage],
-      [-40...85#sym.degree;C operating temperature range],
-      [10kA ampere interrupting capacity],
-      [15A current rating],
-      [Medium time delay],
-    ),
-  ),
-  component(
-    manufacturer: "Weidmuller",
-    catalog: "2940102572",
-    qty: "2",
-    sheet: 8,
-    description: "Circuit Breaker, 120VAC, 2A",
-    tags: ("CB1215", "CB1218",),
-    specs: (
-      [240VAC operating voltage],
-      [-40...85#sym.degree;C operating temperature range],
-      [10kA ampere interrupting capacity],
-      [2A current rating],
-      [Medium time delay],
-    ),
-  ),
-  component(
-    manufacturer: "Weidmuller",
-    catalog: "2940102579",
+    catalog: "7940102579",
     qty: "2",
     sheet: 8,
     description: "Circuit Breaker, 120VAC, 1A",
@@ -233,11 +237,41 @@
   ),
   component(
     manufacturer: "Weidmuller",
+    catalog: "7940102582",
+    qty: "4",
+    sheet: 8,
+    description: "Circuit Breaker, 120VAC, 15A",
+    tags: ("CB1205", "CB1208", "CB1220", "CB1225",),
+    specs: (
+      [240VAC operating voltage],
+      [-40...85#sym.degree;C operating temperature range],
+      [10kA ampere interrupting capacity],
+      [15A current rating],
+      [Medium time delay],
+    ),
+  ),
+  component(
+    manufacturer: "Weidmuller",
+    catalog: "7940102572",
+    qty: "1",
+    sheet: 8,
+    description: "Circuit Breaker, 120VAC, 2A",
+    tags: ("CB1218",),
+    specs: (
+      [240VAC operating voltage],
+      [-40...85#sym.degree;C operating temperature range],
+      [10kA ampere interrupting capacity],
+      [2A current rating],
+      [Medium time delay],
+    ),
+  ),
+  component(
+    manufacturer: "Weidmuller",
     catalog: "7940102624",
     qty: "2",
     sheet: 8,
     description: "Circuit Breaker, 24VDC, 1A",
-    tags: ("CB1420", "CB1435",),
+    tags: ("CB1420", "CB1437",),
     specs: (
       [80VDC operating voltage],
       [-40...85#sym.degree;C operating temperature range],
@@ -252,7 +286,7 @@
     qty: "1",
     sheet: 9,
     description: "Duplex GFCI Receptacle, 15A",
-    tags: ("RECP1207",),
+    tags: ("RECP1208",),
     specs: (
       [125VAC nominal supply voltage],
       [15A nominal current rating],
@@ -267,7 +301,7 @@
     qty: "10",
     sheet: 10,
     description: "Miniature Relay, 120VAC, 8 Blade",
-    tags: ("CR1203", "CR1217", "CR1702", "CR1703", "CR1704", "CR1705", "CR1706", "CR1707", "CR1708", "CR1709",),
+    tags: ("CR1203", "CR1206", "CR1702", "CR1703", "CR1704", "CR1705", "CR1706", "CR1707", "CR1708", "CR1709",),
     specs: (
       [120VAC control circuit voltage],
       [10A continuous output current],
@@ -285,7 +319,7 @@
     qty: "10",
     sheet: 10,
     description: "Miniature Relay Socket, 120VAC, DIN",
-    tags: ("CR1203", "CR1217", "CR1702", "CR1703", "CR1704", "CR1705", "CR1706", "CR1707", "CR1708", "CR1709",),
+    tags: ("CR1203", "CR1206", "CR1702", "CR1703", "CR1704", "CR1705", "CR1706", "CR1707", "CR1708", "CR1709",),
     specs: (
       [For RXM 2 C/O series plug-in relay],
       [10A conventional free air thermal current],
@@ -330,16 +364,17 @@
   ),
   component(
     manufacturer: "Mersen",
-    catalog: "GGM3",
-    qty: "8",
+    catalog: "MI5HF25V2/100",
+    qty: "2",
     sheet: 13,
-    description: "Fast Blow Fuse, 3A",
-    tags: ("FU1758", "FU1759", "FU1760", "FU1761", "FU1762", "FU1763", "FU1764", "FU1765",),
+    description: "Miniature Fuse, Fast Acting, 2A",
+    tags: ("FU1403", "FU1407",),
     specs: (
-      [Glass body],
+      [2A current rating],
       [5 mm x 20 mm size],
-      [10kA I.R. at 125VAC],
-      [3A current rating],
+      [1500A breaking capacity at 250VAC],
+      [1.17W loss at 100% In],
+      [0.17V maximum voltage drop],
     ),
   ),
   component(
@@ -359,17 +394,16 @@
   ),
   component(
     manufacturer: "Mersen",
-    catalog: "MI5HF25V2/100",
-    qty: "2",
+    catalog: "GGM3",
+    qty: "8",
     sheet: 13,
-    description: "Miniature Fuse, Fast Acting, 2A",
-    tags: ("FU1403", "FU1407",),
+    description: "Fast Blow Fuse, 3A",
+    tags: ("FU1758", "FU1759", "FU1760", "FU1761", "FU1762", "FU1763", "FU1764", "FU1765",),
     specs: (
-      [2A current rating],
+      [Glass body],
       [5 mm x 20 mm size],
-      [1500A breaking capacity at 250VAC],
-      [1.17W loss at 100% In],
-      [0.17V maximum voltage drop],
+      [10kA I.R. at 125VAC],
+      [3A current rating],
     ),
   ),
   component(
@@ -393,7 +427,7 @@
     qty: "2",
     sheet: 14,
     description: "Remote Door Switch",
-    tags: ("LS1205", "LS1218",),
+    tags: ("LS1205",),
     specs: (
       [NEMA 4X rated door switch assembly],
       [Mounts on enclosure frame and includes mounted hardware],
@@ -466,7 +500,7 @@
     qty: "1",
     sheet: 17,
     description: "Processor",
-    tags: ("Controller",),
+    tags: ("CONTROLLER",),
     specs: (
       [Modicon M340 automation platform],
       [Processor module for severe environments],
@@ -505,7 +539,7 @@
   component(
     manufacturer: "Modicon",
     catalog: "BMXFTB2800",
-    qty: "6",
+    qty: "1",
     sheet: 19,
     description: "Terminal Block, 20 Pin",
     tags: ("PLC1802",),
@@ -612,6 +646,23 @@
     ),
   ),
   component(
+    manufacturer: "Ventev",
+    catalog: "LMR195NMSM-6",
+    qty: "1",
+    sheet: 27,
+    description: "SMA Jumper Cable",
+    tags: ("CBL1402",),
+    specs: (
+      [N male to SMA male connector],
+      [General purpose fire rating],
+      [No fire retardant],
+      [Black jacket color],
+      [Straight-straight connector body style],
+      [Not UV resistant or rated for direct burial],
+      [6ft jumper length],
+    ),
+  ),
+  component(
     manufacturer: "Amphenol",
     catalog: "LDF4-50A",
     qty: "1",
@@ -629,23 +680,6 @@
       [1-8800MHz operating frequency band],
       [40kW peak power],
       [Attenuation values typical, guaranteed within 5%],
-    ),
-  ),
-  component(
-    manufacturer: "Ventev",
-    catalog: "LMR195NMSM-6",
-    qty: "1",
-    sheet: 27,
-    description: "SMA Jumper Cable",
-    tags: ("CBL1402",),
-    specs: (
-      [N male to SMA male connector],
-      [General purpose fire rating],
-      [No fire retardant],
-      [Black jacket color],
-      [Straight-straight connector body style],
-      [Not UV resistant or rated for direct burial],
-      [6ft jumper length],
     ),
   ),
   component(

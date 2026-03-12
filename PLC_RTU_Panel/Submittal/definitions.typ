@@ -10,7 +10,7 @@
 
 #let is_instrument_submittal = false
 #let has_spare_parts = false
-#let has_heating_calc = false
+#let has_heating_calc = true
 
 #let term_blocks = [TB-AC, TB-AI, TB-AO, TB-DC, TB-DI, TB-DO]
 
@@ -32,9 +32,18 @@
 )
 
 #let heat_dissapated = (
-  "UPS": "225",
-  "DC Power Supplies": "112.5",
-  "Digital Input Modules": "139.12",
+  "PLC": "95.5",
+  "Ethernet Switch": "20.5",
+  "24VDC Power Supplies": "307.1",
+  "PLC Power Supply": "29.0",
+)
+
+#let pws_components = (
+  "Ethernet Switch": "0.0417",
+  "Modem": "0.0417",
+  "OIT": "0.7083",
+  "Chart Recorder": "1.4583",
+  "Level Display": "1"
 )
 
 #let component = e.types.declare(
@@ -49,6 +58,7 @@
     field("description", str, doc: "Part description", required: true, named: true),
     field("tags", array, doc: "Tags used for part number", required: true, named: true),
     field("specs", array, doc: "Specifications for part", required: true, named: true),
-    field("service", str, doc: "Service for instrument", required: false, named: true)
+    field("service", str, doc: "Service for instrument", required: false, named: true),
+    field("misc", content, doc: "Content to render after specs", required: false, named: true)
   ),
 )
