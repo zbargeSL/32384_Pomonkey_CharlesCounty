@@ -3,7 +3,7 @@
 #let components = (
   component(
     manufacturer: "SCE",
-    catalog: "SCE-30H2412SSLP",
+    catalog: "SCE-30H2416SSLP",
     qty: "1",
     sheet: 1,
     description: "Wall Mount Enclosure - NEMA 4X",
@@ -78,19 +78,18 @@
   ),
   component(
     manufacturer: "Leviton",
-    catalog: "5801-W",
+    catalog: "T5015-W",
     qty: "1",
     sheet: 3,
-    description: "Single Receptacle, 20A",
+    description: "Single Receptacle, 15A",
     tags: ("RECP3204",),
     specs: (
       [125VAC rated supply voltage],
-      [20A rated current],
+      [15A rated current],
       [2-pole, 3 wire grounding],
-      [White nylon body material],
+      [White thermoplastic nylon body material],
       [Brass 8-32 grounding screw],
       [Zinc-plated steel strap material],
-      [-40...60#sym.degree;C operating temperature],
     ),
   ),
   component(
@@ -145,7 +144,7 @@
   ),
   component(
     manufacturer: "APC",
-    catalog: "APC9614",
+    catalog: "AP9614",
     qty: "1",
     sheet: 5,
     description: "Dry Contact I/O Card",
@@ -160,7 +159,7 @@
   component(
     manufacturer: "APC",
     catalog: "SRT48BP",
-    qty: "2",
+    qty: "1",
     sheet: 5,
     description: "UPS External Battery Pack",
     tags: ("BP",),

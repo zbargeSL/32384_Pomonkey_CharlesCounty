@@ -21,7 +21,7 @@
 )
 
 #let ups_components = (
-  "24VDC Power Supply": "569",
+  "24VDC Power Supply": "113.8",
   "PLC": "36",
   "DO Card": "3.6",
   "Modem": "1",
@@ -92,5 +92,5 @@
   let perc_use = float(total_power_draw)/float(pws_load_cap) * 100
   let va_to_watts = (float(total_power_draw)*900)/float(1000)
 
-  list(indent: 1em)[$"Total power draw" = (#total_power_draw"VA")*(900"W")/(#pws_load_cap"VA")=#va_to_watts"W"$. At this load, with 2 additional battery packs, the UPS has a runtime of 1 hour and 54 minutes.] 
+  list(indent: 1em)[$"Total power draw" = (#total_power_draw"VA")*(900"W")/(#pws_load_cap"VA")=#va_to_watts"W"$. At this load, with an additional battery pack, the UPS has a runtime of approximately 3 hours and 2854minutes.] 
 }
