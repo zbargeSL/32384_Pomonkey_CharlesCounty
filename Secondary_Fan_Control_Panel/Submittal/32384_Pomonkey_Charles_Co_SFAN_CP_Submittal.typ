@@ -25,9 +25,9 @@
 #{
   set page(
     margin: (top: 2in, bottom: 2in)
-  )
+  ) 
 
-  align(center)[
+align(center)[
     #upper[*#project*] \
   \
     #upper[#purpose] \
@@ -45,6 +45,7 @@
   *CONTRACTOR: #upper[#contractor]*
   ]
 }
+
 
 #pagebreak()
 
@@ -85,6 +86,12 @@ General Comments: <Comments>
 
 #for comment in comments{
   [+ #comment \ \ ]
+}
+
+Resubmittal Comment Confirmations:
+
+#for (resub_comment, resp) in resub_comments{
+  [+ #resub_comment #linebreak() #linebreak()Sherwood Logan Response: #linebreak()#linebreak() #resp #linebreak()#linebreak()]
 }
 
 #pagebreak()

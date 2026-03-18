@@ -1,9 +1,9 @@
 #import "@preview/elembic:1.1.1" as e: field, types
 
-#let name = "32385 Pomonkey Pump Station SFAN CP Submittal"
+#let name = "32385 Pomonkey Pump Station SFAN CP Resubmittal"
 
 #let project = "Charles County Pomonkey Pump Station Improvements"
-#let purpose = [#underline[*Secondary Fan Control Panel Submittal*]]
+#let purpose = [#underline[*Secondary Fan Control Panel Resubmittal*]]
 #let spec_section = "Section 17441 - Controls System Hardware"
 #let engineer = "WRA"
 #let contractor = "Johnston Construction"
@@ -24,6 +24,18 @@
 
 #let comments = (
   [The wiring schematics assume a $1/4$HP motor with an FLA of 5.8. Please verify and confirm the motor nameplate details for the secondary fan motor.],
+)
+
+#let resub_comments = (
+  "Fault Contact: Overload contact label is incorrect update as shown below.": [The overload contact which turns on the fault light has been updated accordingly to trigger on fan motor overload.],
+  "Panel Size: Per Contract Drawing I-8, backplate width shall be 11ft. Submitted panel widths are as follows:
+  - SCP: 20.00 in.
+  - SPMP-01: 31.38 in.
+  - SPMP-02: 31.38 in.
+  - SFAN-01: 16.00 in.
+
+Based on Contract Drawings, UPS and PLC panels are estimated to be 20 and 30 inches wide, respectively. Total width of all panels currently comes to 149in. approximately, which will not suit the 11ft backplate. Contractor shall minimize panel widths (to match Contract Drawings) as necessary to meet backplate width requirements.": [The dimensions of the RVSS panels have been modified such that all submitted panel dimensions should fit on the 11ft backplate.],
+"SFAN-01 Horspower Comment: In response to Contractor comment on submittal page 5/77: SFAN-01 is shown with 1/4HP motor in submittal 8-15700-01 FRP Utility Set Fan": [Sherwood Logan has acknowledged that the submitted fan motor is $1/4$HP.]
 )
 
 #let heat_dissapated = (
