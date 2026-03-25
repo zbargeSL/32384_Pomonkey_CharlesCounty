@@ -34,7 +34,7 @@
 #let heat_dissapated = (
   "PLC": "95.5",
   "Ethernet Switch": "20.5",
-  "24VDC Power Supplies": "307.1",
+  "24VDC Power Supplies": "72",
   "PLC Power Supply": "29.0",
 )
 
