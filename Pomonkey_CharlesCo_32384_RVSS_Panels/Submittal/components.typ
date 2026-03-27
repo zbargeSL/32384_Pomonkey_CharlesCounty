@@ -443,6 +443,18 @@
   ),
   component(
     manufacturer: "Socomec",
+    catalog: "48290230",
+    qty: 1,
+    sheet: 13,
+    description: "DIN Rail Mounting Kit",
+    tags: ("PWS0306",),
+    specs: (
+      [For DIRIS/ISOM Digiware displays],
+      [Installation/mounting set for DIN rail adapter],
+    ),
+  ),
+  component(
+    manufacturer: "Socomec",
     catalog: "48290555",
     qty: 3,
     sheet: 13,
