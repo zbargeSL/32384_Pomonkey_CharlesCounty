@@ -3,7 +3,7 @@
 #let components = (
   component(
     manufacturer: "Endress + Hauser",
-    catalog: "FMR20-CBPBMVCEVEE3+Z1",
+    catalog: "FMR20B-FBBADTBMVCGVEED+Z1",
     qty: "1",
     sheet: 1,
     description: "Radar Level Transmitter",
@@ -12,12 +12,14 @@
     specs: (
       [Up to 66ft measuring range],
       [FMR20 - Micropilot FMR20 series time-of-flight radar measurement],
-      [CB - CSA C/US IS CI.I Div.2 Gr.A-d, AEx/Ex ia IIC T4 approvals],
-      [P - 2 wire power supply, 4-20mA HART output, HART/Bluetooth (App) configuration operation],
-      [BM - 40mm/1-$1/2$" antenna, 15m liquid, -40#sym.degree;C...80#sym.degree;C max measuring range],
-      [VCE - Thread ASME MNPT1 process connection rear side, PVDF material, FNPT $1/2$ conduit connection],
-      [VEE - Thread ASME MNPT1-$1/2$ process connection front side, PVDF material],
-      [3 - 20m/65ft cable length],
+      [FB - CAN/US IS Cl.I,II,III Div.1 Gr.A-G T4 AEx/Ex ia IIC T4, AEx/Ex ia IIIC],
+      [BA - 2 wire, 4-20mA HART output],
+      [D - LED + bluetooth display/operation],
+      [T - Pre-installed cable for electrical connection],
+      [BM - PVDF encapsulated, 40mm / 1-$1/2$" antenna],
+      [VCG - Thread ASME MNPT1 process connection cable entry],
+      [VEE - Thread ASME MNPT1-$1/2$ process connection antenna end, PVDF material],
+      [D - 20m/65ft cable length],
       [Z1 - Tagging],
     ),
   ),
@@ -30,7 +32,7 @@
     tags: ("LT-01",),
     service: "Pump Station Wet Well",
     specs: (
-      [Pivotable and adjustable arm for mounting E+H FMR20],
+      [Pivotable and adjustable arm for mounting E+H FMR20B],
       [Allows alignment of transmitter with the center of a channel],
     ),
   ),
@@ -40,7 +42,7 @@
     qty: "6",
     sheet: 2,
     description: "Float Switch, NO",
-    tags: ("LSLL-01", "LSL-01", "LSL-02", "LSH-03", "LSHH-01", "LSH-02",),
+    tags: ("LSLL-01", "LSL-01", "LSH-01", "LSHH-01", "LSL-03", "LSH-03",),
     service: "Pump Station Level Float Switches",
     specs: (
       [G - Model G float switch],
@@ -51,29 +53,29 @@
     ),
   ),
   component(
-    manufacturer: "Precision Digital",
-    catalog: "PD6000-7H2",
+    manufacturer: "E+H",
+    catalog: "RIA452-C211A11A",
     qty: "1",
     sheet: 4,
     description: "Digital Process Meter Display",
     tags: ("LEVEL DISPLAY",),
     service: "PLC/RTU Panel Process Meter Display",
     specs: (
-      [0.6" dual line red LED 6 digit SunBright display],
-      [NEMA 4X, IP65 rated with provided panel gasket],
-      [24VDC supply voltage],
-      [-40 to 149#sym.degree;F operating temperature range],
-      [4-20mA input, 2 form C SPDT relays rated at 3A at 30VDC or 3A at 250VAC resistive load],
-      [Programmable output relay operation and reset functionality],
-      [Max/Min display stored until reset by user or meter is turned off],
-      [Four front panel buttons for programming display],
+      [RIA452 - Process indicator with pump control unit],
+      [C - FM AIS, I, II, III/2/ABCDEFG approvals],
+      [2 - 20-30VDC, 20-28VAC power supply],
+      [1 - 0/4-20mA measuring signal],
+      [1 - 4 output relays, SPDT],
+      [A - Standard communication],
+      [1 - 96x96 panel mounting housing, front IP65],
+      [1 - Basic version],
+      [A - Standard version],
     ),
   ),
 )
 
-#let spare_parts = components.filter(comp => comp.catalog == "71187780" or comp.catalog == "FMR20-CBPBMVCEVEE3+Z1")
+#let spare_parts = components.filter(comp => comp.catalog == "FMR20B-FBBADTBMVCGVEED+Z1")
 
 #let spare_parts_qty = (
-  "71187780": "1",
-  "FMR20-CBPBMVCEVEE3+Z1": "1",
+  "FMR20B-FBBADTBMVCGVEED+Z1": "1",
 )

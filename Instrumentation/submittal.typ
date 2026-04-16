@@ -87,6 +87,14 @@ General Comments: <Comments>
   [+ #comment \ \ ]
 }
 
+#if is_resubmittal [
+  *Resubmittal \##resubmittal_number Comment Confirmations:*
+
+  #for (resub_comment, response) in resub_comments {
+    [+ #resub_comment #linebreak()#linebreak() *Sherwood Logan Response:* #linebreak()#linebreak() #response #linebreak()#linebreak()]
+  }
+]
+
 #pagebreak()
 
 #align(center)[
@@ -151,7 +159,7 @@ General Comments: <Comments>
     set text(size: 10pt)
 
     table(
-      columns: (auto, 1fr, 1fr, 1fr, 1fr),
+      columns: (auto, 1fr, auto, 1fr, 1fr),
       align:(center + horizon), 
       table.header([*SHT*], [*MANUFACTURER*], [*MODEL*], [*DESCRIPTION*], [*QTY*]),
       ..spare_parts_rows.flatten(),
