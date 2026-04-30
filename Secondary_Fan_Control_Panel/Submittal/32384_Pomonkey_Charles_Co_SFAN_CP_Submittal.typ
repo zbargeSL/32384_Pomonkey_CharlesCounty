@@ -90,7 +90,13 @@ General Comments: <Comments>
 
 Resubmittal Comment Confirmations:
 
-#for (resub_comment, resp) in resub_comments{
+#for (resub_comment, resp) in resub_comments_1{
+  [+ #resub_comment #linebreak() #linebreak()Sherwood Logan Response: #linebreak()#linebreak() #resp #linebreak()#linebreak()]
+}
+
+Resubmittal \#17441-01-02 Comment Confirmations:
+
+#for (resub_comment, resp) in resub_comments_2{
   [+ #resub_comment #linebreak() #linebreak()Sherwood Logan Response: #linebreak()#linebreak() #resp #linebreak()#linebreak()]
 }
 
