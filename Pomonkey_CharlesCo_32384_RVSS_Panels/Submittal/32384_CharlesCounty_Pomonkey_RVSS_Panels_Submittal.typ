@@ -77,7 +77,7 @@
   [+ #comment \ \ ]
 }
 
-*Resubmittal Comment Confirmations:*
+*Resubmittal \##resubmittal_no Comment Confirmations:*
 
 #for (resub_comment, response) in resub_comments{
   [+ #resub_comment \ \ *Sherwood Logan Response:* \ \ #response \ \ ]

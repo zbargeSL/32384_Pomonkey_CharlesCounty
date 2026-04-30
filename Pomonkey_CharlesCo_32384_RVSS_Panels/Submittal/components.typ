@@ -424,14 +424,14 @@
   ),
   component(
     manufacturer: "Socomec",
-    catalog: "48250500",
+    catalog: "48250501",
     qty: 1,
     sheet: 13,
     description: "Modbus Power Meter",
     tags: ("PWS0306",),
     specs: (
-      [Modbus RTU communication protocols],
-      [RS485 communication ports],
+      [Modbus TCP/IP, BACnet IP, HTTP, FTP, SMTP communication protocols],
+      [RJ45 10/100Mbs communication ports],
       [110-277VAC power supply voltage],
       [10-key capacative touch-screen],
       [50-300VAC max voltage (phase/neutral)],
