@@ -139,6 +139,8 @@
       [On-line UPS, sine wave waveform type],
     ),
     misc: [
+      #gen_pws_calc_table(("PLCPS",), 569, pws_components)
+
       #gen_load_calc_table(("UPS",), 1000, ups_components)
     ]
   ),
