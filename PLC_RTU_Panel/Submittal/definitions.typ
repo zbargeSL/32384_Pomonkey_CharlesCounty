@@ -31,6 +31,9 @@
   [The digital process meter and digital chart recorder have been submitted under a separate cover.],
 )
 
+#let resub_comments = (
+)
+
 #let heat_dissapated = (
   "PLC": "95.5",
   "Ethernet Switch": "20.5",
@@ -42,7 +45,6 @@
   "Ethernet Switch": "0.0417",
   "Modem": "0.0417",
   "OIT": "0.7083",
-  "Chart Recorder": "1.4583",
   "Level Display": "1"
 )
 
