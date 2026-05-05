@@ -271,7 +271,7 @@
     qty: "2",
     sheet: 8,
     description: "Circuit Breaker, 24VDC, 1A",
-    tags: ("CB1420", "CB1437",),
+    tags: ("CB1421", "CB1437",),
     specs: (
       [80VDC operating voltage],
       [-40...85#sym.degree;C operating temperature range],
@@ -380,10 +380,10 @@
   component(
     manufacturer: "Mersen",
     catalog: "MI5HF25V0.5/100",
-    qty: "3",
+    qty: "4",
     sheet: 13,
     description: "Miniature Fuse, Fast Acting, 0.5A",
-    tags: ("FU1501", "FU1520", "FU1601",),
+    tags: ("FU1501", "FU1520", "FU1601", "FU1920"),
     specs: (
       [0.5A current rating],
       [5 mm x 20 mm size],
@@ -409,10 +409,10 @@
   component(
     manufacturer: "Phoenix Contact",
     catalog: "3046100",
-    qty: "13",
+    qty: "14",
     sheet: 13,
     description: "Fuse Terminal Block, 120VAC",
-    tags: ("FU1758", "FU1759", "FU1760", "FU1761", "FU1762", "FU1763", "FU1764", "FU1765", "FU1501", "FU1520", "FU1601", "FU1403", "FU1407",),
+    tags: ("FU1758", "FU1759", "FU1760", "FU1761", "FU1762", "FU1763", "FU1764", "FU1765", "FU1501", "FU1520", "FU1601", "FU1403", "FU1407", "FU1920",),
     specs: (
       [Category III overvoltage protection],
       [4kV rated surge voltage],
@@ -495,6 +495,19 @@
     ),
   ),
   component(
+    manufacturer: "Schneider Electric",
+    catalog: "VJDBTPRO3P",
+    qty: "1",
+    sheet: 16,
+    description: "HMI Software",
+    tags: ("OIT",),
+    specs: (
+      [Vijeo Designer configuration software],
+      [3 station group license],
+      [Windows 10 professional 32/64 bit or Windows 11 OS requirement],
+    ),
+  ),
+  component(
     manufacturer: "Modicon",
     catalog: "BMXP342020H",
     qty: "1",
@@ -509,6 +522,21 @@
       [2 Ethernet communication ports],
       [4096kB internal RAM (256kB for data, 3584kB for program constants and symbols)],
       [-13...158#sym.degree;F ambient air temperature range for operation],
+    ),
+  ),
+  component(
+    manufacturer: "Modicon",
+    catalog: "CEXSPUCZSGPAZZ",
+    qty: "1",
+    sheet: 17,
+    description: "Modicon PLC Software",
+    tags: ("CONTROLLER",),
+    specs: (
+      [EcoStruxture Control Expert License],
+      [Service pack base, V16],
+      [Control expert small],
+      [3 user license group],
+      [Windows 10/11, Windows Server 2019/2022 operating system requirement],
     ),
   ),
   component(
@@ -528,10 +556,10 @@
   component(
     manufacturer: "Modicon",
     catalog: "BMXFTB2000",
-    qty: "5",
+    qty: "6",
     sheet: 19,
     description: "Terminal Block, 20 Pin",
-    tags: ("PLC1502", "PLC1521", "PLC1602", "PLC1701", "PLC1901",),
+    tags: ("PLC1502", "PLC1521", "PLC1602", "PLC1701", "PLC1901", "PLC1925"),
     specs: (
       [20 terminal cage clamp removable terminal block],
     ),
@@ -552,7 +580,7 @@
     catalog: "BMXDAI1604H",
     qty: "3",
     sheet: 20,
-    description: "Discrete Input Module",
+    description: "Discrete Input Module, 120VAC",
     tags: ("PLC1502", "PLC1521", "PLC1602"),
     specs: (
       [120VAC discrete input voltage],
@@ -610,6 +638,23 @@
       [3W power consumption typical at 24VDC],
       [140mA current consumption at 24VDC],
       [Open circuit detection],
+    ),
+  ),
+  component(
+    manufacturer: "Modicon",
+    catalog: "BMXDDI1602H",
+    qty: "1",
+    sheet: 24,
+    description: "Discrete Input Module, 24VDC",
+    tags: ("PLC1925",),
+    specs: (
+      [24VDC discrete input voltage],
+      [16 isolated discrete inputs for severe environments],
+      [Reverse polarity input protection],
+      [6.8k#sym.Omega input impedance],
+      [2.5W power dissipation],
+      [Paralleling of inputs],
+      [3.5mA discrete input current],
     ),
   ),
   component(
