@@ -9,7 +9,7 @@
 }
 
 #let project = "32384 Charles County Pomonkey Pump Station Improvements"
-#let purpose = [#underline[*Instrumentation #submittal_type*]]
+#let purpose = [#underline[*Instrumentation Record Submittal*]]
 #let spec_section = "Section 17500 - Instrumentation"
 #let engineer = "WRA"
 #let contractor = "Johnston Construction"
@@ -17,7 +17,7 @@
 #let reference = "32384 Charles County Pomonkey Pump Station Improvements"
 
 #let is_instrument_submittal = true
-#let has_spare_parts = true
+#let has_spare_parts = false
 #let has_heating_calc = false
 
 #let term_blocks = [TB-AC]
@@ -31,14 +31,12 @@
 )
 
 #let resub_comments = (
-  "Specification Section 17500.1.03.B for non-contacting level transmitters states that calculations, arrangement, and dimensional drawings for the installation location shall be submitted. These were not included in this submittal for the Radar Level Transmitter.":[A dimensional drawing with calculations has been included.],
-  "Submittal \"11307-01-02 NEW Back Up Pump\" includes float LSL-02 and LSH-02. This submittal also includes LSL-02 and LSH-02 on page 37/82. Contractor shall coordinate supply and provide 6 floats total, not 8.":[The tags included in this submittal for the float switches have been updated so as not to include floats LSL-02 and LSH-02 which have already been submitted on.],
-  "Submit mounting hardware as indicated on Contract Drawing I-9.": [These types of floats are "mounted" using an external weight which is supplied with the float switch.],
-  "After discussion with the County, the digital recorder is not needed for the site. Remove digital chart recorder cutsheet. Provide a credit associated with the removal of the digital chart recorder from the project.":[The digital chart recorder has been removed from this submittal],
-  "The submitted display does not meet the requirements of Specification 17500 Section 2.05:
-    A. Display shall be a 7 digit
-    B. Display shall contain a bar graph": [The display has been updated to a manufacturer and model that meets the requirements of Specification 17500 Section 2.05.],
-  "The specified Endress+Hauser Micropilot FMR20 is being phased out by the manufacturer. Provide the manufacturer's current replacement model FMR20B, configured to meet the specified performance and signal requirements. The replacement model is the manufacturer's current equivalent and is available at a lower cost than the originally specified unit. Revise and resubmit product data accordingly.": [The Micropilot FMR20 that was previously submitted on has been replaced with the FMR20B in this submittal.],
+  "Specification 17500, Section 1.03 - B requires additional information beyond beam angle, width, and depth. This includes but is not limited to distance from \"ladders, fill stream, floats, and any other nearby object\".
+
+  Further, current dimensional indicate mounting of transmitter near fill stream. Per manufacturer instructions, transmitter shall not be installed above the filling curtain. Contractor shall provide dimensional drawings meeting the specification requirements, and manufacturer recommended installation requirements. Return record copy.":[Level sensor model has been changed to the 3" antenna to allow for a tighter beam angle. Updated dimensional drawings have been included. Additional specific mounting information will be coordinated with the contractor.],
+  "Submittal changed \"LSL-02\" tag to \"LSL-03\", and \"LSH=-2\" tag to \"LSH-03\". This still results in eight total floats submitted for this project. Per prior comment, only six are required.
+  Since Back Up Pump submittal is approved, and includes two floats, remove LSL-03 and LSH-03 from this submittal. Return record copy.":[Floats LSL-03 and LSH-03 have been removed from this submittal as requested.],
+  "Mounting hardware shown on I-9 is not limited to external weight, but also cable strain reliefs, hook, cable eye, and anchor. Submit hardware as requested in record copy.": [A float bracket has been submitted with included strain relief. Verify this mounting hardware is sufficient.],
 )
 
 #let resubmittal_number = "17500-01-01"
