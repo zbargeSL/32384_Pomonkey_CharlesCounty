@@ -54,14 +54,14 @@
   ),
   component(
     manufacturer: "SJE Rhombus",
-    catalog: "1009433",
+    catalog: "1009435",
     qty: "1",
     sheet: 2,
     description: "Float Switch Mounting Bracket",
     tags: ("LSLL-01", "LSL-01", "LSH-01", "LSHH-01",),
     service: "Pump Station Level Float Switches",
     specs: (
-      [4 float bracket],
+      [6 float bracket],
       [Supplied with cord strain relief connectors],
       [300 series stainless steel construction],
       [Strain relief connector accomodates 18/2, 18/3, 16/2, 16/3 SJOW and SJTW cords.],
@@ -89,8 +89,8 @@
   ),
 )
 
-#let spare_parts = components.filter(comp => comp.catalog == "FMR20B-FBBADTBMVCGVEED+Z1")
+#let spare_parts = components.filter(comp => comp.catalog == "FMR20B-FBBADTBNVCGXR0D+Z1")
 
 #let spare_parts_qty = (
-  "FMR20B-FBBADTBMVCGVEED+Z1": "1",
+  "FMR20B-FBBADTBNVCGXR0D+Z1": "1",
 )
