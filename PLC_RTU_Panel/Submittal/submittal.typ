@@ -96,7 +96,7 @@ General Comments: <Comments>
   [+ #comment #linebreak()#linebreak()]
 }
 
-*Resubmittal \#17250-01-01 Comment Confirmations:*
+*Resubmittal \#17250-01-02 Comment Confirmations:*
 
 #for (resub_comment, resp) in resub_comments {
   [+ #resub_comment #linebreak()#linebreak() *Sherwood Logan Response:* #linebreak()#linebreak() #resp #linebreak()#linebreak()]

@@ -158,7 +158,7 @@
     qty: "2",
     sheet: 6,
     description: "24VDC Power Supply",
-    tags: ("PWS1220", "PWS1225",),
+    tags: ("PWS1220", "PWS1225"),
     specs: (
       [100VAC...240VAC nominal input voltage range],
       [569VA nominal power consumption],
@@ -179,16 +179,16 @@
       #table(
         columns: (75%, 25%),
         align: (left, center),
-        stroke: (x,y) => if y == 0 or (x == 1 and y == pws_components.len()) {(bottom: 1pt)} else {none},
+        stroke: (x, y) => if y == 0 or (x == 1 and y == pws_components.len()) { (bottom: 1pt) } else { none },
         table.header([Description], [Current Draw #linebreak() (Amps)]),
         ..pws_components.pairs().flatten(),
-        table.cell(align: right, [Total Current Draw]), [#total_current_draw]
+        table.cell(align: right, [Total Current Draw]), [#total_current_draw],
       )
 
-      #let perc_use = total_current_draw/pws_current_cap * 100
+      #let perc_use = calc.round(total_current_draw / pws_current_cap * 100, digits: 2)
 
-      #list(indent: 1em)[$"Total current capacity" = #total_current_draw/#pws_current_cap", "#perc_use% "used"$] 
-    ]
+      #list(indent: 1em)[$"Total current capacity" = #total_current_draw/#pws_current_cap", "#perc_use% "used"$]
+    ],
   ),
   component(
     manufacturer: "Phoenix Contact",
@@ -226,7 +226,7 @@
     qty: "2",
     sheet: 8,
     description: "Circuit Breaker, 120VAC, 1A",
-    tags: ("CB1211", "CB1213",),
+    tags: ("CB1211", "CB1213"),
     specs: (
       [240VAC operating voltage],
       [-40...85#sym.degree;C operating temperature range],
@@ -241,7 +241,7 @@
     qty: "4",
     sheet: 8,
     description: "Circuit Breaker, 120VAC, 15A",
-    tags: ("CB1205", "CB1208", "CB1220", "CB1225",),
+    tags: ("CB1205", "CB1208", "CB1220", "CB1225"),
     specs: (
       [240VAC operating voltage],
       [-40...85#sym.degree;C operating temperature range],
@@ -271,7 +271,7 @@
     qty: "2",
     sheet: 8,
     description: "Circuit Breaker, 24VDC, 1A",
-    tags: ("CB1421", "CB1437",),
+    tags: ("CB1421", "CB1437"),
     specs: (
       [80VDC operating voltage],
       [-40...85#sym.degree;C operating temperature range],
@@ -301,7 +301,7 @@
     qty: "10",
     sheet: 10,
     description: "Miniature Relay, 120VAC, 8 Blade",
-    tags: ("CR1203", "CR1206", "CR1702", "CR1703", "CR1704", "CR1705", "CR1706", "CR1707", "CR1708", "CR1709",),
+    tags: ("CR1203", "CR1206", "CR1702", "CR1703", "CR1704", "CR1705", "CR1706", "CR1707", "CR1708", "CR1709"),
     specs: (
       [120VAC control circuit voltage],
       [10A continuous output current],
@@ -319,7 +319,7 @@
     qty: "10",
     sheet: 10,
     description: "Miniature Relay Socket, 120VAC, DIN",
-    tags: ("CR1203", "CR1206", "CR1702", "CR1703", "CR1704", "CR1705", "CR1706", "CR1707", "CR1708", "CR1709",),
+    tags: ("CR1203", "CR1206", "CR1702", "CR1703", "CR1704", "CR1705", "CR1706", "CR1707", "CR1708", "CR1709"),
     specs: (
       [For RXM 2 C/O series plug-in relay],
       [10A conventional free air thermal current],
@@ -368,7 +368,7 @@
     qty: "2",
     sheet: 13,
     description: "Miniature Fuse, Fast Acting, 2A",
-    tags: ("FU1403", "FU1407",),
+    tags: ("FU1403", "FU1407"),
     specs: (
       [2A current rating],
       [5 mm x 20 mm size],
@@ -398,7 +398,7 @@
     qty: "8",
     sheet: 13,
     description: "Fast Blow Fuse, 3A",
-    tags: ("FU1758", "FU1759", "FU1760", "FU1761", "FU1762", "FU1763", "FU1764", "FU1765",),
+    tags: ("FU1758", "FU1759", "FU1760", "FU1761", "FU1762", "FU1763", "FU1764", "FU1765"),
     specs: (
       [Glass body],
       [5 mm x 20 mm size],
@@ -412,7 +412,22 @@
     qty: "14",
     sheet: 13,
     description: "Fuse Terminal Block, 120VAC",
-    tags: ("FU1758", "FU1759", "FU1760", "FU1761", "FU1762", "FU1763", "FU1764", "FU1765", "FU1501", "FU1520", "FU1601", "FU1403", "FU1407", "FU1920",),
+    tags: (
+      "FU1758",
+      "FU1759",
+      "FU1760",
+      "FU1761",
+      "FU1762",
+      "FU1763",
+      "FU1764",
+      "FU1765",
+      "FU1501",
+      "FU1520",
+      "FU1601",
+      "FU1403",
+      "FU1407",
+      "FU1920",
+    ),
     specs: (
       [Category III overvoltage protection],
       [4kV rated surge voltage],
@@ -763,9 +778,11 @@
   ),
 )
 
-#let spare_parts = components.filter(comp => comp.catalog == "test2" or comp.catalog == "test")
+#let spare_parts = components.filter(comp => comp.catalog == "BMXCPS3500H" or comp.catalog == "BMXDAI1604H" or comp.catalog == "BMXDRA0815H" or comp.catalog == "BMXAMI0810H")
 
 #let spare_parts_qty = (
-  "test": "1",
-  "test2": "2"
+  "BMXCPS3500H": "1",
+  "BMXDAI1604H": "1",
+  "BMXDRA0815H": "1",
+  "BMXAMI0810H": "1",
 )
