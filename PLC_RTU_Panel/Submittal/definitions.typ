@@ -1,7 +1,7 @@
 #import "@preview/elembic:1.1.1" as e: field, types
 
 #let project = "32384 Charles County Pomonkey Pump Station Improvements"
-#let purpose = [#underline[*PLC/RTU Control Panel Resubmittal*]]
+#let purpose = [#underline[*PLC/RTU Control Panel Record Submittal*]]
 #let spec_section = "Section 17441 - Controls System Hardware"
 #let engineer = "WRA"
 #let contractor = "Johnston Construction"
